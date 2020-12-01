@@ -19,3 +19,17 @@ function scrollRotate() {
     "translate(34 34) rotate(" + window.pageYOffset / 2 + " 117 117)"
   );
 }
+
+const observer = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.remove("inactive");
+    } else {
+      entry.target.classList.add("inactive");
+    }
+  });
+});
+
+const tarotSection = document.querySelector(".tarot-section");
+observer.observe(tarotSection);

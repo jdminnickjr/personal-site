@@ -241,7 +241,18 @@ h3 {
   border: solid #ff4c00 2px;
   border-radius: 5px;
   transform-style: preserve-3d;
-  transition: all 1.5s ease;
+  transition: transform 1s ease;
+  transform: rotateY(180deg);
+}
+
+.card-link:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.card-link:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.card-link:nth-child(4) {
+  transition-delay: 0.6s;
 }
 
 .tarot-back {
@@ -266,8 +277,8 @@ h3 {
   transform: rotateY(180deg);
 }
 
-.flipped {
-  transform: rotateY(180deg);
+.inactive .card-link {
+  transform: rotateY(0deg);
 }
 
 .border {
@@ -573,6 +584,6 @@ h3 {
   }
 
   .card-link:nth-of-type(odd) {
-    transform: translateX(-0.01rem) translateY(3.75em);
+    margin-top: 5rem;
   }
 }
