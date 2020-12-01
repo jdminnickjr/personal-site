@@ -393,18 +393,6 @@ h3 {
     bottom: -12rem;
   }
 
-  #outer-ring {
-    transform-origin: 50% 50%;
-  }
-
-  /* #middle-ring { */
-  /* transform-origin: 44% 44%; */
-  /* } */
-
-  /* #inner-ring { */
-  /* transform-origin: 20% 20%; */
-  /* } */
-
   .projects {
     text-align: center;
   }
