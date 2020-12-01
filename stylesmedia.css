@@ -133,11 +133,6 @@ h3 {
   padding: 10px;
   margin-left: -3rem;
   margin-bottom: 5.5rem;
-  transition: transform 1s ease-in-out;
-}
-
-.mag-cir:hover {
-  transform: rotate(90deg);
 }
 
 /*TIMELINE SECTION------------------------------*/
@@ -149,7 +144,7 @@ h3 {
   margin-bottom: 4rem;
 }
 .timeline-list-item {
-  font-size: 1.5em;
+  font-size: 1.2em;
   display: grid;
   grid-auto-flow: column;
   place-items: center;
@@ -238,12 +233,41 @@ h3 {
   flex-direction: column;
 }
 .card-link {
+  display: block;
   position: relative;
   width: 200px;
   margin: 1em;
   padding: 5px;
   border: solid #ff4c00 2px;
   border-radius: 5px;
+  transform-style: preserve-3d;
+  transition: all 1.5s ease;
+}
+
+.tarot-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: black;
+  fill: #ff4c00;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.tarot-front {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: black;
+  transform: rotateY(180deg);
+}
+
+.flipped {
+  transform: rotateY(180deg);
 }
 
 .border {
@@ -286,7 +310,7 @@ h3 {
   text-transform: uppercase;
   left: 0;
   right: 0;
-  top: 1.35rem;
+  top: 1rem;
 }
 
 .icon {
@@ -368,6 +392,18 @@ h3 {
     margin: 0 auto;
     bottom: -12rem;
   }
+
+  #outer-ring {
+    transform-origin: 50% 50%;
+  }
+
+  /* #middle-ring { */
+  /* transform-origin: 44% 44%; */
+  /* } */
+
+  /* #inner-ring { */
+  /* transform-origin: 20% 20%; */
+  /* } */
 
   .projects {
     text-align: center;
