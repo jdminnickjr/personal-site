@@ -1,9 +1,24 @@
+@font-face {
+  font-family: "GT Super Text";
+  src: url("/fonts/gt-super/GT-Super-Text-Medium.woff2") format("woff2"),
+    url("/fonts/gt-super/GT-Super-Text-Medium.woff") format("woff"),
+    url("/fonts/gt-super/GT-Super-Text-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GT Super Display";
+  src: url(fonts/gt-super/GT-Super-Display-Light.woff2) format("woff2"),
+    url(fonts/gt-super/GT-Super-Display-Light.woff) format("woff"),
+    url(fonts/gt-super/GT-Super-Display-Light.ttf) format("truetype");
+}
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
 body {
+  font-family: "GT Super Text";
   color: white;
   background: black;
   margin: 0;
@@ -18,13 +33,19 @@ header {
   text-align: center;
 }
 
+h1 {
+  font-family: "GT Super Display";
+}
+
 h2 {
+  font-family: "GT Super Display";
   text-align: center;
   font-size: 3rem;
   text-transform: uppercase;
 }
 
 h3 {
+  font-family: "GT Super Display";
   font-size: 2em;
 }
 
@@ -48,6 +69,7 @@ h3 {
   background-color: black;
   text-decoration: none;
   padding: 10px 0;
+  margin-bottom: 2rem;
 }
 
 /*Header--------------------------------------*/
@@ -111,6 +133,31 @@ h3 {
   top: 4em;
 }
 
+h1 {
+  position: relative;
+  line-height: 0.8;
+  text-transform: uppercase;
+}
+
+h1::before {
+  content: "";
+  display: block;
+  background-image: linear-gradient(
+    to bottom right,
+    transparent,
+    transparent 50%,
+    currentColor calc(50% + 2px),
+    transparent calc(50% + 4px),
+    transparent 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
 .dev {
   font-size: 15px;
   color: white;
@@ -137,7 +184,7 @@ h3 {
 
 /*TIMELINE SECTION------------------------------*/
 .timeline-list {
-  width: 100%;
+  margin: 0 auto;
   list-style-type: upper-roman;
   counter-reset: timeline;
   padding: 0 1rem;
@@ -147,13 +194,15 @@ h3 {
   font-size: 1.2em;
   display: grid;
   grid-auto-flow: column;
-  place-items: center;
+  align-items: center;
+  justify-content: start;
   margin-bottom: 2rem;
   counter-increment: timeline;
   gap: 1rem;
   padding-top: 1rem;
 }
 .timeline-list-item:before {
+  font-family: "GT Super Display";
   display: flex;
   place-items: center;
   color: #ff4c00;
@@ -174,6 +223,7 @@ h3 {
 }
 
 .section-header {
+  position: relative;
   padding: 0 1rem;
   text-align: center;
   max-width: 28rem;
@@ -184,6 +234,31 @@ h3 {
   border-bottom: solid #ff4c00 2px;
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.projects-span,
+.contact-span {
+  position: relative;
+}
+
+.projects-span::before,
+.contact-span::before {
+  content: "";
+  display: block;
+  background-image: linear-gradient(
+    to bottom right,
+    transparent,
+    transparent 50%,
+    currentColor calc(50% + 2px),
+    transparent calc(50% + 4px),
+    transparent 100%
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
 
 .sigil {
@@ -214,6 +289,7 @@ h3 {
 
 .project-link {
   color: #ff4c00;
+  text-decoration: underline;
   font-size: 1em;
 }
 
@@ -231,107 +307,43 @@ h3 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-.card-link {
-  display: block;
-  position: relative;
-  width: 200px;
-  margin: 1em;
-  padding: 5px;
-  border: solid #ff4c00 2px;
-  border-radius: 5px;
-  transform-style: preserve-3d;
-  transition: transform 1s ease;
-  transform: rotateY(180deg);
-}
-
-.card-link:nth-child(2) {
-  transition-delay: 0.2s;
-}
-.card-link:nth-child(3) {
-  transition-delay: 0.4s;
-}
-.card-link:nth-child(4) {
-  transition-delay: 0.6s;
+  margin-bottom: 2rem;
 }
 
 .tarot-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background: black;
-  fill: #ff4c00;
-  left: 0;
-  right: 0;
-  top: 0;
-  margin: 0 auto;
-  padding: 5px;
+  display: none;
 }
 
 .tarot-front {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
-  background: black;
-  transform: rotateY(180deg);
-}
-
-.inactive .card-link {
-  transform: rotateY(0deg);
 }
 
 .border {
+  display: none;
   fill: #ff4c00;
 }
 .image {
-  z-index: -1;
-  position: absolute;
-  fill: white;
-  top: 4rem;
-  left: 14px;
-  width: calc(100% - 10px);
-}
-
-.github {
-  left: 17px;
-  width: calc(100% - 15px);
-}
-
-.twitter {
-  left: 1.5rem;
-  width: calc(100% - 25px);
-}
-
-.codepen {
-  left: 0.3rem;
-  top: 5rem;
-}
-
-.linkedin {
-  left: -3px;
-  width: calc(100% + 7px);
+  display: none;
 }
 
 .title {
-  position: absolute;
   text-align: center;
-  color: #ff4c00;
-  font-size: 1rem;
+  color: white;
+  font-size: 2rem;
   text-transform: uppercase;
-  left: 0;
-  right: 0;
-  top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .icon {
-  position: absolute;
-  fill: #ff4c00;
-  width: 30px;
-  bottom: 1.5rem;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  padding: 5px;
+  fill: white;
+  width: 60px;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
 }
 /*QUERIES---------------------------------- */
 
@@ -395,6 +407,11 @@ h3 {
     transform-origin: 0 0;
   }
 
+  /* .crossbar-head {
+    top: 4.5rem;
+    height: 320px;
+  } */
+
   .mag-cir {
     position: absolute;
     left: 0;
@@ -430,6 +447,112 @@ h3 {
     grid-column-gap: 2rem;
     grid-template-columns: auto auto;
   }
+
+  .card-link {
+    display: block;
+    position: relative;
+    width: 200px;
+    margin: 1em;
+    padding: 5px;
+    border: solid #ff4c00 2px;
+    border-radius: 5px;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+    transform: rotateY(180deg);
+  }
+
+  .card-link:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .card-link:nth-child(3) {
+    transition-delay: 0.4s;
+  }
+  .card-link:nth-child(4) {
+    transition-delay: 0.6s;
+  }
+
+  .tarot-back {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: black;
+    fill: #ff4c00;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    padding: 5px;
+  }
+
+  .tarot-front {
+    display: block;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: black;
+    transform: rotateY(180deg);
+  }
+
+  .inactive .card-link {
+    transform: rotateY(0deg);
+  }
+
+  .border {
+    display: block;
+    fill: #ff4c00;
+  }
+  .image {
+    display: block;
+    z-index: -1;
+    position: absolute;
+    fill: white;
+    top: 4rem;
+    left: 14px;
+    width: calc(100% - 10px);
+  }
+
+  .github {
+    left: 17px;
+    width: calc(100% - 15px);
+  }
+
+  .twitter {
+    left: 1.5rem;
+    width: calc(100% - 25px);
+  }
+
+  .codepen {
+    left: 0.3rem;
+    top: 5rem;
+  }
+
+  .linkedin {
+    left: -3px;
+    width: calc(100% + 7px);
+  }
+
+  .title {
+    position: absolute;
+    text-align: center;
+    color: #ff4c00;
+    font-size: 1rem;
+    text-transform: uppercase;
+    left: 0;
+    right: 0;
+    top: 1rem;
+  }
+
+  .icon {
+    position: absolute;
+    fill: #ff4c00;
+    width: 30px;
+    bottom: 1.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 1046px) {
@@ -453,8 +576,14 @@ h3 {
     font-size: 16rem;
   }
 
+  /* .crossbar-head {
+    height: 110%;
+    width: 3px;
+    top: -8rem;
+  } */
+
   .dev:nth-of-type(2) {
-    transform: translatey(-7em) rotate(180deg);
+    transform: translateY(-6em) rotate(180deg);
   }
 
   .cir:nth-of-type(3) {
