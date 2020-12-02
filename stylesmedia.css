@@ -56,11 +56,13 @@ h3 {
 /*Navigation-----------------------------------*/
 
 .navigation {
-  font-size: 40px;
+  font-family: "GT Super Display";
+  font-size: 19px;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-bottom: 2rem;
 }
 
 .navigation a {
@@ -68,14 +70,14 @@ h3 {
   color: white;
   background-color: black;
   text-decoration: none;
-  padding: 10px 0;
-  margin-bottom: 2rem;
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
 /*Header--------------------------------------*/
 
 .headerbox {
-  padding-top: 8rem;
+  padding-top: 15rem;
   overflow: hidden;
 }
 
@@ -109,6 +111,7 @@ h3 {
 }
 
 .cir:nth-of-type(1):after {
+  font-family: "GT Super Display";
   display: block;
   content: "XIII";
   color: #ff4c00;
@@ -126,11 +129,11 @@ h3 {
 }
 
 .text {
+  font-family: "GT Super Display";
   text-align: center;
   align-self: center;
   color: #ff4c00;
-  font-size: 2rem;
-  top: 4em;
+  font-size: 32px;
 }
 
 h1 {
@@ -159,15 +162,25 @@ h1::before {
 }
 
 .dev {
-  font-size: 15px;
+  position: absolute;
+  font-family: "GT Super Display";
+  font-size: 12px;
   color: white;
   display: inline-block;
   text-decoration: none;
-  transform: translatey(3em);
+  top: -2em;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .dev:nth-of-type(2) {
-  transform: translatey(-3.5em) rotate(180deg);
+  position: absolute;
+  top: 5.5em;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: rotate(180deg);
 }
 
 .mag-cir {
@@ -184,12 +197,14 @@ h1::before {
 
 /*TIMELINE SECTION------------------------------*/
 .timeline-list {
+  font-family: "GT Super Display";
   margin: 0 auto;
   list-style-type: upper-roman;
   counter-reset: timeline;
   padding: 0 1rem;
   margin-bottom: 4rem;
 }
+
 .timeline-list-item {
   font-size: 1.2em;
   display: grid;
@@ -200,9 +215,9 @@ h1::before {
   counter-increment: timeline;
   gap: 1rem;
   padding-top: 1rem;
+  line-height: 3rem;
 }
 .timeline-list-item:before {
-  font-family: "GT Super Display";
   display: flex;
   place-items: center;
   color: #ff4c00;
@@ -294,6 +309,7 @@ h1::before {
 }
 
 .roman-cap {
+  font-family: "GT Super Display";
   text-align: right;
   color: #ff4c00;
   font-size: 4rem;
@@ -354,7 +370,7 @@ h1::before {
     height: 100vh;
     max-height: 56.25rem;
   }
-
+  /* HEADER SECTION 500px --------------------- */
   .headerbox {
     border: 3px solid #ff4c00;
     position: absolute;
@@ -384,7 +400,7 @@ h1::before {
     bottom: 8rem;
     right: -2rem;
   }
-
+  /* NAVIGATION SECTION 500px ------------------ */
   .navigation {
     display: inline-block;
     font-size: 2em;
@@ -407,11 +423,6 @@ h1::before {
     transform-origin: 0 0;
   }
 
-  /* .crossbar-head {
-    top: 4.5rem;
-    height: 320px;
-  } */
-
   .mag-cir {
     position: absolute;
     left: 0;
@@ -420,7 +431,7 @@ h1::before {
     margin: 0 auto;
     bottom: -12rem;
   }
-
+  /* PROJECTS SECTION 500px ------------------- */
   .projects {
     text-align: center;
   }
@@ -440,7 +451,7 @@ h1::before {
     display: inline-block;
     margin: 0 auto;
   }
-
+  /* CONTACT FOOTER 500px -------------------------- */
   .tarot-section {
     display: grid;
     place-items: center;
@@ -556,6 +567,7 @@ h1::before {
 }
 
 @media (min-width: 1046px) {
+  /* HEADER SECTION 1046px ------------------- */
   header {
     position: relative;
     height: 100vh;
@@ -568,22 +580,26 @@ h1::before {
     place-items: center;
     position: absolute;
     width: calc(100% - 5rem);
+    height: calc(100% + 10rem);
     top: 2.5rem;
     bottom: 2.5rem;
   }
 
   .header h1 {
-    font-size: 16rem;
+    font-size: 200px;
   }
 
-  /* .crossbar-head {
-    height: 110%;
-    width: 3px;
-    top: -8rem;
-  } */
+  .text {
+    margin-top: 4rem;
+    font-size: 84px;
+  }
+
+  .dev {
+    font-size: 16px;
+  }
 
   .dev:nth-of-type(2) {
-    transform: translateY(-6em) rotate(180deg);
+    top: 10rem;
   }
 
   .cir:nth-of-type(3) {
@@ -626,14 +642,6 @@ h1::before {
     margin-top: -3rem;
   }
 
-  .text {
-    font-size: 8vw;
-  }
-
-  .text h1 {
-    margin: 0;
-  }
-
   .mag-cir {
     z-index: 1;
     background-color: black;
@@ -643,7 +651,7 @@ h1::before {
     bottom: -12rem;
     margin: 0 auto;
   }
-
+  /* TIMELINE 1046px -------------------------- */
   .timeline-list {
     position: relative;
     align-items: center;
@@ -651,6 +659,7 @@ h1::before {
     margin: 0 auto;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    margin-top: 22em;
   }
 
   .timeline-list:before {
@@ -673,13 +682,14 @@ h1::before {
     transform: translateX(calc(50% - 1.5rem));
   }
   .timeline-list-item:nth-of-type(even) {
+    text-align: right;
     flex-direction: row-reverse;
     transform: translateX(calc(-50% + 1.5rem));
   }
   .timeline-list-item:last-of-type {
     margin: 0;
   }
-
+  /* PROJECTS 1046px ----------------------------- */
   .projects {
     text-align: center;
   }
@@ -701,7 +711,7 @@ h1::before {
   .project-link {
     color: #ff4c00;
   }
-
+  /* CONTACT FOOTER 1046px -------------------- */
   .tarot-section {
     grid-template-columns: repeat(4, auto);
     grid-gap: 1rem;
