@@ -130,36 +130,20 @@ h3 {
 }
 
 .text {
+  position: relative;
   font-family: "GT Super Display";
   text-align: center;
   align-self: center;
   color: #ff4c00;
-  font-size: 20px;
 }
 
 h1 {
   position: relative;
   line-height: 0.8;
   text-transform: uppercase;
-}
-
-h1::before {
-  content: "";
-  display: block;
-  background-image: linear-gradient(
-    to bottom right,
-    transparent,
-    transparent 50%,
-    currentColor calc(50% + 2px),
-    transparent calc(50% + 4px),
-    transparent 100%
-  );
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+  font-weight: normal;
+  letter-spacing: -2.5px;
+  font-size: 3rem;
 }
 
 .dev {
@@ -177,7 +161,7 @@ h1::before {
 
 .dev:nth-of-type(2) {
   position: absolute;
-  top: 4.5em;
+  top: 3.5em;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -401,6 +385,38 @@ h1::before {
     bottom: 8rem;
     right: -2rem;
   }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  .dev {
+    font-size: 16px;
+    top: 1rem;
+  }
+
+  .dev:nth-of-type(2) {
+    top: 6rem;
+  }
+
+  h1::before {
+    content: "";
+    display: block;
+    background-image: linear-gradient(
+      to bottom right,
+      transparent,
+      transparent 50%,
+      currentColor calc(50% + 2px),
+      transparent calc(50% + 4px),
+      transparent 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
   /* NAVIGATION SECTION 500px ------------------ */
   .navigation {
     display: inline-block;
@@ -586,8 +602,8 @@ h1::before {
     bottom: 2.5rem;
   }
 
-  .header h1 {
-    font-size: 200px;
+  h1 {
+    font-size: 170px;
   }
 
   .text {
@@ -596,11 +612,12 @@ h1::before {
   }
 
   .dev {
-    font-size: 16px;
+    top: 5rem;
+    font-size: 18px;
   }
 
   .dev:nth-of-type(2) {
-    top: 10rem;
+    top: 16rem;
   }
 
   .cir:nth-of-type(3) {
