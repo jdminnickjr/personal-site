@@ -133,7 +133,7 @@ h3 {
   text-align: center;
   align-self: center;
   color: #ff4c00;
-  font-size: 32px;
+  font-size: 27px;
 }
 
 h1 {
@@ -176,7 +176,7 @@ h1::before {
 
 .dev:nth-of-type(2) {
   position: absolute;
-  top: 5.5em;
+  top: 4.5em;
   left: 0;
   right: 0;
   margin: 0 auto;
