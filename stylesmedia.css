@@ -40,7 +40,7 @@ h1 {
 h2 {
   font-family: "GT Super Display";
   text-align: center;
-  font-size: 3rem;
+  font-size: 48px;
   text-transform: uppercase;
 }
 
@@ -49,8 +49,26 @@ h3 {
   font-size: 2em;
 }
 
+span {
+  font-family: "GT Super Display";
+}
+
 #uses {
   display: none;
+}
+
+.overlay {
+  background-image: url(/jd-tex-compressed.jpg);
+  background-size: cover;
+  opacity: 0.5;
+  z-index: 2;
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  mix-blend-mode: screen;
+  pointer-events: none;
 }
 
 /*Navigation-----------------------------------*/
@@ -183,27 +201,40 @@ h1 {
 /*TIMELINE SECTION------------------------------*/
 .timeline-list {
   font-family: "GT Super Display";
-  margin: 0 auto;
   list-style-type: upper-roman;
   counter-reset: timeline;
   padding: 0 1rem;
   margin-bottom: 4rem;
+  margin: 0 5rem 5rem 4rem;
 }
 
 .timeline-list-item {
   font-size: 1.2em;
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   margin-bottom: 2rem;
   counter-increment: timeline;
   gap: 1rem;
   padding-top: 1rem;
-  line-height: 3rem;
+  line-height: 1.2;
 }
+
+.timeline-date {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: "GT Super Display";
+}
+
+.timeline-text {
+  font-size: 16px;
+}
+
 .timeline-list-item:before {
   display: flex;
+  font-size: 24px;
+  grid-row-end: span 2;
   place-items: center;
   color: #ff4c00;
   width: 3rem;
@@ -282,14 +313,15 @@ h1 {
 
 .projects-list-item {
   display: grid;
-  grid-template-columns: 3.5rem 1fr;
-  grid-column-gap: 1.5rem;
+  grid-template-columns: 5rem 1fr;
+  grid-column-gap: 0rem;
   margin-bottom: 3rem;
+  font-size: 1em;
 }
 
 .project-link {
   color: #ff4c00;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 1em;
 }
 
@@ -297,7 +329,7 @@ h1 {
   font-family: "GT Super Display";
   text-align: right;
   color: #ff4c00;
-  font-size: 4rem;
+  font-size: 4em;
   width: 3.5rem;
 }
 
@@ -362,10 +394,10 @@ h1 {
     display: grid;
     place-items: center;
     overflow: visible;
-    left: 2.5rem;
-    right: 2.5rem;
-    top: 2.5rem;
-    bottom: 2.5rem;
+    left: 3rem;
+    right: 3rem;
+    top: 3rem;
+    bottom: 3rem;
     padding-top: 0;
   }
 
@@ -432,7 +464,7 @@ h1 {
   }
 
   .projects-nav {
-    transform: translateX(calc(-75px - 100%)) translateY(29px);
+    transform: translateX(calc(-75px - 100%)) translateY(13px);
   }
 
   .contact-nav {
@@ -575,8 +607,8 @@ h1 {
   .icon {
     position: absolute;
     fill: #ff4c00;
-    width: 30px;
-    bottom: 1.5rem;
+    width: 35px;
+    bottom: 1rem;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -596,14 +628,23 @@ h1 {
     display: grid;
     place-items: center;
     position: absolute;
-    width: calc(100% - 5rem);
-    height: calc(100% + 10rem);
-    top: 2.5rem;
-    bottom: 2.5rem;
+    width: calc(100% - 6.5rem);
+    height: calc(100% - 5rem);
+    top: 4rem;
+    bottom: 4rem;
   }
 
   h1 {
     font-size: 170px;
+  }
+
+  h2 {
+    font-size: 4.5em;
+  }
+
+  h3 {
+    font-size: 3em;
+    max-width: 20rem;
   }
 
   .text {
@@ -677,7 +718,7 @@ h1 {
     margin: 0 auto;
     padding-top: 3rem;
     padding-bottom: 3rem;
-    margin-top: 22em;
+    margin-top: -3em;
   }
 
   .timeline-list:before {
@@ -692,18 +733,26 @@ h1 {
     top: 0;
     bottom: 0;
   }
+
   .timeline-list-item {
-    display: flex;
+    grid-auto-flow: dense;
+    margin-bottom: 6rem;
+    margin-top: 4rem;
   }
 
   .timeline-list-item:nth-of-type(odd) {
     transform: translateX(calc(50% - 1.5rem));
   }
   .timeline-list-item:nth-of-type(even) {
+    grid-template-columns: 1fr auto;
     text-align: right;
-    flex-direction: row-reverse;
     transform: translateX(calc(-50% + 1.5rem));
   }
+
+  .timeline-list-item:nth-of-type(even)::before {
+    grid-column: 2;
+  }
+
   .timeline-list-item:last-of-type {
     margin: 0;
   }
@@ -713,12 +762,15 @@ h1 {
   }
 
   .project-list {
+    position: relative;
     display: inline-block;
     margin: 0 auto;
+    margin-bottom: 10rem;
   }
 
   .projects-list-item {
     display: flex;
+    max-width: 40rem;
     align-items: center;
   }
 
@@ -726,8 +778,25 @@ h1 {
     flex-direction: row-reverse;
   }
 
+  .roman-cap {
+    font-size: 8em;
+    margin-right: 4rem;
+  }
+
   .project-link {
     color: #ff4c00;
+  }
+
+  .project-list:before {
+    position: absolute;
+    display: block;
+    width: 3px;
+    height: 20%;
+    content: "";
+    background-color: #ff4c00;
+    left: 50%;
+    margin-left: -1.5px;
+    bottom: -10em;
   }
   /* CONTACT FOOTER 1046px -------------------- */
   .tarot-section {
