@@ -35,10 +35,12 @@ header {
 
 h1 {
   font-family: "GT Super Display";
+  font-weight: normal;
 }
 
 h2 {
   font-family: "GT Super Display";
+  font-weight: normal;
   text-align: center;
   font-size: 48px;
   text-transform: uppercase;
@@ -46,7 +48,9 @@ h2 {
 
 h3 {
   font-family: "GT Super Display";
+  font-weight: normal;
   font-size: 2em;
+  text-transform: uppercase;
 }
 
 span {
@@ -228,10 +232,12 @@ h1 {
   text-transform: uppercase;
   font-size: 12px;
   font-family: "GT Super Display";
+  margin-left: 1.2rem;
 }
 
 .timeline-text {
   font-size: 16px;
+  margin-left: 1.2rem;
 }
 
 .timeline-list-item:before {
@@ -319,7 +325,7 @@ h1 {
 
 .projects-list-item {
   display: grid;
-  grid-template-columns: 15rem 1fr;
+  grid-template-columns: 5rem 1fr;
   grid-column-gap: 0rem;
   margin-bottom: 3rem;
   font-size: 1em;
@@ -337,14 +343,6 @@ h1 {
   color: #ff4c00;
   font-size: 4em;
   width: 3.5rem;
-}
-
-.timeline-text {
-  margin-left: 1.2rem;
-}
-
-.timeline-date {
-  margin-left: 1.2rem;
 }
 
 /*Contact Footer----------------------------------*/
@@ -401,6 +399,11 @@ h1 {
     height: 100vh;
     max-height: 35rem;
   }
+
+  h3 {
+    font-size: 3rem;
+  }
+
   /* HEADER SECTION 500px --------------------- */
   .headerbox {
     border: 3px solid #ff4c00;
@@ -653,7 +656,6 @@ h1 {
 
   h3 {
     font-size: 3em;
-    max-width: 20rem;
   }
 
   .text {
