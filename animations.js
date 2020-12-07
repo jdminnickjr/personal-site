@@ -22,7 +22,6 @@ function scrollRotate() {
 
 const observer = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
-    console.log(entry);
     if (entry.isIntersecting) {
       entry.target.classList.remove("inactive");
     } else {
