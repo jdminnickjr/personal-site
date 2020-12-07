@@ -74,8 +74,11 @@ span {
 /*Navigation-----------------------------------*/
 
 .navigation {
-  font-family: "GT Super Display";
-  font-size: 19px;
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  font-family: "GT Super Text";
+  line-height: 1.5;
   color: white;
   display: flex;
   flex-direction: column;
@@ -453,9 +456,8 @@ h1 {
   /* NAVIGATION SECTION 500px ------------------ */
   .navigation {
     display: inline-block;
-    font-size: 2em;
     position: absolute;
-    top: -3rem;
+    top: -2.5rem;
     right: 0;
   }
 
@@ -469,7 +471,7 @@ h1 {
   }
 
   .contact-nav {
-    transform: translateX(0.6em) translateY(calc(85px + 100%)) rotate(90deg);
+    transform: translateX(0.7em) translateY(calc(85px + 100%)) rotate(90deg);
     transform-origin: 0 0;
   }
 
