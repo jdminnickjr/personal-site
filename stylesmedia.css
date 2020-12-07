@@ -173,8 +173,11 @@ h1 {
 
 .dev {
   position: absolute;
-  font-family: "GT Super Display";
-  font-size: 12px;
+  font-family: "GT Super Text";
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.75rem;
   color: white;
   display: inline-block;
   text-decoration: none;
@@ -186,7 +189,7 @@ h1 {
 
 .dev:nth-of-type(2) {
   position: absolute;
-  top: 3.5em;
+  bottom: 1rem;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -641,7 +644,7 @@ h1 {
     place-items: center;
     position: absolute;
     width: calc(100% - 6.5rem);
-    height: calc(100% - 5rem);
+    height: calc(100% - 5remrem);
     top: 4rem;
     bottom: 4rem;
   }
@@ -665,7 +668,7 @@ h1 {
 
   .dev {
     top: 5rem;
-    font-size: 18px;
+    font-size: 1rem;
   }
 
   .dev:nth-of-type(2) {
