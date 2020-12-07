@@ -203,7 +203,6 @@ h1 {
 
 /*TIMELINE SECTION------------------------------*/
 .timeline-list {
-  font-family: "GT Super Display";
   list-style-type: upper-roman;
   counter-reset: timeline;
   padding: 0 1rem;
@@ -212,6 +211,7 @@ h1 {
 }
 
 .timeline-list-item {
+  font-family: "GT Super Text";
   font-size: 1.2em;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -219,12 +219,12 @@ h1 {
   justify-content: center;
   margin-bottom: 2rem;
   counter-increment: timeline;
-  gap: 1rem;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
   line-height: 1.2;
 }
 
 .timeline-date {
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   font-size: 12px;
   font-family: "GT Super Display";
@@ -235,6 +235,7 @@ h1 {
 }
 
 .timeline-list-item:before {
+  font-family: "GT Super Display";
   display: flex;
   font-size: 24px;
   grid-row-end: span 2;
@@ -316,7 +317,7 @@ h1 {
 
 .projects-list-item {
   display: grid;
-  grid-template-columns: 5rem 1fr;
+  grid-template-columns: 15rem 1fr;
   grid-column-gap: 0rem;
   margin-bottom: 3rem;
   font-size: 1em;
@@ -334,6 +335,14 @@ h1 {
   color: #ff4c00;
   font-size: 4em;
   width: 3.5rem;
+}
+
+.timeline-text {
+  margin-left: 1.2rem;
+}
+
+.timeline-date {
+  margin-left: 1.2rem;
 }
 
 /*Contact Footer----------------------------------*/
@@ -497,11 +506,6 @@ h1 {
     grid-column-gap: 2rem;
     display: flex;
     align-items: center;
-  }
-
-  .project-list {
-    display: inline-block;
-    margin: 0 auto;
   }
   /* CONTACT FOOTER 500px -------------------------- */
   .tarot-section {
@@ -717,7 +721,7 @@ h1 {
   .timeline-list {
     position: relative;
     align-items: center;
-    max-width: 50%;
+    max-width: 25%;
     margin: 0 auto;
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -739,10 +743,13 @@ h1 {
 
   .timeline-list-item {
     grid-auto-flow: dense;
-    margin-bottom: 6rem;
-    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+    max-width: 266px;
   }
-
+  .timeline-date,
+  .timeline-text {
+    margin-right: 1.2rem;
+  }
   .timeline-list-item:nth-of-type(odd) {
     transform: translateX(calc(50% - 1.5rem));
   }
