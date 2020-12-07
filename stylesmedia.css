@@ -273,6 +273,8 @@ h1 {
 
 .projects-span,
 .contact-span {
+  display: inline-block;
+  line-height: 0.7;
   position: relative;
 }
 
