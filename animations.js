@@ -9,17 +9,17 @@ window.onscroll = function () {
 function scrollRotate() {
   outerRing.setAttribute(
     "transform",
-    "rotate(" + window.pageYOffset / 2 + " 290 290)"
+    "rotate(" + window.pageYOffset / 4 + " 290 290)"
   );
 
   middleRing.setAttribute(
     "transform",
-    "rotate(" + -window.pageYOffset / 2 + " 290 290) translate(45 45)"
+    "rotate(" + -window.pageYOffset / 4 + " 290 290) translate(45 45)"
   );
 
   innerRing.setAttribute(
     "transform",
-    "translate(34 34) rotate(" + window.pageYOffset / 2 + " 117 117)"
+    "translate(34 34) rotate(" + window.pageYOffset / 4 + " 117 117)"
   );
 }
 
