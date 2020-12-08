@@ -379,9 +379,10 @@ h1 {
 }
 
 .title {
+  font-family: "GT Super Display";
   text-align: center;
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
@@ -389,7 +390,8 @@ h1 {
 .icon {
   padding: 5px;
   fill: white;
-  width: 60px;
+  width: 1.5rem;
+  height: 1.5rem;
   margin-bottom: 2rem;
   margin-right: 1rem;
 }
