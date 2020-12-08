@@ -214,7 +214,6 @@ h1 {
   counter-reset: timeline;
   padding: 0 1rem;
   margin-bottom: 4rem;
-  margin: 0 5rem 5rem 4rem;
 }
 
 .timeline-list-item {
