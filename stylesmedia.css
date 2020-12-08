@@ -189,7 +189,7 @@ h1 {
 
 .dev:nth-of-type(2) {
   position: absolute;
-  bottom: 1rem;
+  bottom: -1.5rem;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -797,7 +797,7 @@ h1 {
 
   .roman-cap {
     font-size: 8em;
-    margin-right: 4rem;
+    text-align: justify;
   }
 
   .project-link {
