@@ -565,7 +565,7 @@ h1 {
     width: 9rem;
   }
 
-  .hover-icon:hover {
+  .card-link:hover .hover-icon {
     opacity: 0.75;
   }
 
