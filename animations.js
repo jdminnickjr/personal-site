@@ -7,19 +7,17 @@ window.onscroll = function () {
 };
 
 function scrollRotate() {
-  outerRing.setAttribute(
-    "transform",
-    "rotate(" + window.pageYOffset / 4 + " 290 290)"
-  );
+  const ammountToRotate = window.pageYOffset / 4;
+  outerRing.setAttribute("transform", `rotate(${ammountToRotate} 290 290)`);
 
   middleRing.setAttribute(
     "transform",
-    "rotate(" + -window.pageYOffset / 4 + " 290 290) translate(45 45)"
+    `rotate( ${-ammountToRotate} 290 290) translate (45 45)`
   );
 
   innerRing.setAttribute(
     "transform",
-    "translate(34 34) rotate(" + window.pageYOffset / 4 + " 117 117)"
+    `translate (34 34) rotate(${ammountToRotate} 117 117)`
   );
 }
 
