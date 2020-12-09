@@ -519,147 +519,6 @@ h1 {
     align-items: center;
   }
   /* CONTACT FOOTER 500px -------------------------- */
-  .tarot-section {
-    display: grid;
-    place-items: center;
-    grid-column-gap: 2rem;
-    grid-template-columns: auto auto;
-  }
-
-  .card-link {
-    display: block;
-    position: relative;
-    width: 200px;
-    margin: 1em;
-    padding: 5px;
-    border: solid #ff4c00 2px;
-    border-radius: 5px;
-    transform-style: preserve-3d;
-    transition: transform 1s ease;
-    transform: rotateY(180deg);
-  }
-
-  .card-link:nth-child(2) {
-    transition-delay: 0.2s;
-  }
-  .card-link:nth-child(3) {
-    transition-delay: 0.4s;
-  }
-  .card-link:nth-child(4) {
-    transition-delay: 0.6s;
-  }
-
-  .hover-icon {
-    display: grid;
-    z-index: 2;
-    height: 10rem;
-    fill: #ff4c00;
-    position: absolute;
-    top: 6rem;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    transition: 0.2s ease-in;
-    opacity: 0;
-  }
-
-  .libra-hover,
-  .lev-hover {
-    opacity: 0;
-    height: 9rem;
-    width: 9rem;
-  }
-
-  .card-link:hover .hover-icon {
-    opacity: 0.75;
-  }
-
-  .tarot-back {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background: black;
-    fill: #ff4c00;
-    left: 0;
-    right: 0;
-    top: 0;
-    margin: 0 auto;
-    padding: 5px;
-    margin-bottom: 0;
-  }
-
-  .tarot-front {
-    display: block;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background: black;
-    transform: rotateY(180deg);
-    margin-bottom: 0;
-  }
-
-  .inactive .card-link {
-    transform: rotateY(0deg);
-  }
-
-  .border {
-    display: block;
-    fill: #ff4c00;
-  }
-  .image {
-    display: block;
-    z-index: -1;
-    position: absolute;
-    fill: white;
-    top: 4rem;
-    left: 14px;
-    width: calc(100% - 10px);
-  }
-
-  .github {
-    left: 17px;
-    width: calc(100% - 15px);
-  }
-
-  .twitter {
-    left: 1.5rem;
-    width: calc(100% - 25px);
-  }
-
-  .codepen {
-    left: 0.3rem;
-    top: 5rem;
-  }
-
-  .linkedin {
-    left: -3px;
-    width: calc(100% + 7px);
-  }
-
-  .title {
-    position: absolute;
-    text-align: center;
-    color: #ff4c00;
-    font-size: 1rem;
-    text-transform: uppercase;
-    left: 0;
-    right: 0;
-    top: 1rem;
-  }
-
-  .icon {
-    position: absolute;
-    fill: #ff4c00;
-    width: 2rem;
-    height: 2rem;
-    bottom: 1rem;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-  }
 }
 
 @media (min-width: 1046px) {
@@ -852,16 +711,149 @@ h1 {
   }
   /* CONTACT FOOTER 1046px -------------------- */
   .tarot-section {
+    display: grid;
+    place-items: center;
     grid-template-columns: repeat(4, auto);
     grid-gap: 1rem;
     margin-bottom: 5rem;
   }
-  .card-link {
-    display: inline-block;
-    margin: 0;
-  }
 
   .card-link:nth-of-type(odd) {
     margin-top: 5rem;
+  }
+
+  .card-link {
+    display: block;
+    position: relative;
+    width: 200px;
+    margin: 1em;
+    padding: 5px;
+    border: solid #ff4c00 2px;
+    border-radius: 5px;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+    transform: rotateY(180deg);
+  }
+
+  .card-link:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .card-link:nth-child(3) {
+    transition-delay: 0.4s;
+  }
+  .card-link:nth-child(4) {
+    transition-delay: 0.6s;
+  }
+
+  .hover-icon {
+    display: grid;
+    z-index: 2;
+    height: 10rem;
+    fill: #ff4c00;
+    position: absolute;
+    top: 6rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transition: 0.2s ease-in;
+    opacity: 0;
+  }
+
+  .libra-hover,
+  .lev-hover {
+    opacity: 0;
+    height: 9rem;
+    width: 9rem;
+  }
+
+  .card-link:hover .hover-icon {
+    opacity: 0.75;
+  }
+
+  .tarot-back {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: black;
+    fill: #ff4c00;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    padding: 5px;
+    margin-bottom: 0;
+  }
+
+  .tarot-front {
+    display: block;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: black;
+    transform: rotateY(180deg);
+    margin-bottom: 0;
+  }
+
+  .inactive .card-link {
+    transform: rotateY(0deg);
+  }
+
+  .border {
+    display: block;
+    fill: #ff4c00;
+  }
+  .image {
+    display: block;
+    z-index: -1;
+    position: absolute;
+    fill: white;
+    top: 4rem;
+    left: 14px;
+    width: calc(100% - 10px);
+  }
+
+  .github {
+    left: 17px;
+    width: calc(100% - 15px);
+  }
+
+  .twitter {
+    left: 1.5rem;
+    width: calc(100% - 25px);
+  }
+
+  .codepen {
+    left: 0.3rem;
+    top: 5rem;
+  }
+
+  .linkedin {
+    left: -3px;
+    width: calc(100% + 7px);
+  }
+
+  .title {
+    position: absolute;
+    text-align: center;
+    color: #ff4c00;
+    font-size: 1rem;
+    text-transform: uppercase;
+    left: 0;
+    right: 0;
+    top: 1rem;
+  }
+
+  .icon {
+    position: absolute;
+    fill: #ff4c00;
+    width: 2rem;
+    height: 2rem;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 }
