@@ -422,6 +422,7 @@ h1 {
     top: 3rem;
     bottom: 3rem;
     padding-top: 0;
+    min-height: 25rem;
     max-height: 30rem;
   }
 
@@ -491,7 +492,7 @@ h1 {
   }
 
   .contact-nav {
-    transform: translateX(0.7em) translateY(calc(85px + 100%)) rotate(90deg);
+    transform: translateX(0.7em) translateY(calc(60px + 100%)) rotate(90deg);
     transform-origin: 0 0;
   }
 
@@ -503,6 +504,11 @@ h1 {
     margin: 0 auto;
     bottom: -12rem;
   }
+  /* TIMELINE SECTION 500PX ---------------------- */
+  .timeline-list {
+    margin-top: 15rem;
+  }
+
   /* PROJECTS SECTION 500px ------------------- */
   .projects {
     text-align: center;
