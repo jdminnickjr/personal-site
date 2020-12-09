@@ -392,6 +392,10 @@ h1 {
   height: 1.5rem;
   margin-right: 1rem;
 }
+
+.hover-icon {
+  display: none;
+}
 /*QUERIES---------------------------------- */
 
 @media (min-width: 500px) {
@@ -546,6 +550,7 @@ h1 {
   }
 
   .hover-icon {
+    display: grid;
     z-index: 2;
     height: 10rem;
     fill: #ff4c00;
@@ -561,6 +566,7 @@ h1 {
 
   .libra-hover,
   .lev-hover {
+    opacity: 0;
     height: 9rem;
     width: 9rem;
   }
