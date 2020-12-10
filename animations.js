@@ -2,23 +2,20 @@ const outerRing = document.getElementById("outer-ring");
 const middleRing = document.getElementById("middle-ring");
 const innerRing = document.getElementById("inner-ring");
 
-window.onscroll = function () {
-  scrollRotate();
-};
-
 function scrollRotate() {
-  const ammountToRotate = window.pageYOffset / 4;
-  outerRing.setAttribute("transform", `rotate(${ammountToRotate} 290 290)`);
+  const amountToRotate = window.pageYOffset / 4;
+  outerRing.setAttribute("transform", `rotate(${amountToRotate} 290 290)`);
 
   middleRing.setAttribute(
     "transform",
-    `rotate( ${-ammountToRotate} 290 290) translate (45 45)`
+    `rotate( ${-amountToRotate} 290 290) translate (45 45)`
   );
 
   innerRing.setAttribute(
     "transform",
-    `translate (34 34) rotate(${ammountToRotate} 117 117)`
+    `translate (34 34) rotate(${amountToRotate} 117 117)`
   );
+  requestAnimationFrame(scrollRotate);
 }
 
 const observer = new IntersectionObserver(function (entries) {
@@ -30,6 +27,19 @@ const observer = new IntersectionObserver(function (entries) {
     }
   });
 });
+
+const circleObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      requestAnimationFrame(scrollRotate);
+    } else {
+      cancelAnimationFrame(scrollRotate);
+    }
+  });
+});
+
+const magCirTarget = document.querySelector(".mag-cir");
+circleObserver.observe(magCirTarget);
 
 const tarotSection = document.querySelector(".tarot-section");
 observer.observe(tarotSection);
