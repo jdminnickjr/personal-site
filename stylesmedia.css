@@ -17,11 +17,16 @@
 *:after {
   box-sizing: border-box;
 }
+
 body {
   font-family: "GT Super Text";
   color: white;
   background: black;
   margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
