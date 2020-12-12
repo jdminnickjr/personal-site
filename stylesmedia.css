@@ -41,6 +41,11 @@ header {
 h1 {
   font-family: "GT Super Display";
   font-weight: normal;
+  position: relative;
+  line-height: 0.8;
+  text-transform: uppercase;
+  letter-spacing: -2.5px;
+  font-size: 19vw;
 }
 
 h2 {
@@ -165,14 +170,6 @@ span {
   text-align: center;
   align-self: center;
   color: #ff4c00;
-}
-
-h1 {
-  position: relative;
-  line-height: 0.8;
-  text-transform: uppercase;
-  letter-spacing: -2.5px;
-  font-size: 19vw;
 }
 
 .dev {
@@ -404,11 +401,8 @@ h1 {
 /*QUERIES---------------------------------- */
 
 @media (min-width: 500px) {
-  header {
-    padding: 2.5rem;
-    margin-bottom: 12rem;
-    height: 100vh;
-    max-height: 35rem;
+  h1 {
+    font-size: 4rem;
   }
 
   h3 {
@@ -416,6 +410,13 @@ h1 {
   }
 
   /* HEADER SECTION 500px --------------------- */
+  header {
+    padding: 2.5rem;
+    margin-bottom: 12rem;
+    height: 100vh;
+    max-height: 35rem;
+  }
+
   .headerbox {
     border: 3px solid #ff4c00;
     position: absolute;
@@ -446,10 +447,6 @@ h1 {
     display: block;
     bottom: 8rem;
     right: -2rem;
-  }
-
-  h1 {
-    font-size: 4rem;
   }
 
   .dev {
@@ -533,6 +530,18 @@ h1 {
 }
 
 @media (min-width: 1046px) {
+  h1 {
+    font-size: 170px;
+  }
+
+  h2 {
+    font-size: 4.5em;
+  }
+
+  h3 {
+    font-size: 3em;
+  }
+
   /* HEADER SECTION 1046px ------------------- */
   header {
     position: relative;
@@ -550,18 +559,6 @@ h1 {
     top: 4rem;
     bottom: 4rem;
     max-height: 50rem;
-  }
-
-  h1 {
-    font-size: 170px;
-  }
-
-  h2 {
-    font-size: 4.5em;
-  }
-
-  h3 {
-    font-size: 3em;
   }
 
   .text {
