@@ -522,8 +522,8 @@ span {
   }
 
   .projects-list-item {
+    display: grid;
     grid-column-gap: 2rem;
-    display: flex;
     align-items: center;
   }
   /* CONTACT FOOTER 500px -------------------------- */
