@@ -246,7 +246,7 @@ span {
 .timeline-list-item:before {
   font-family: "GT Super Display";
   display: flex;
-  font-size: 2rem;
+  font-size: 1.5rem;
   grid-row-end: span 2;
   place-items: center;
   color: #ff4c00;
