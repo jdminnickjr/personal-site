@@ -52,14 +52,14 @@ h2 {
   font-family: "GT Super Display";
   font-weight: normal;
   text-align: center;
-  font-size: 48px;
+  font-size: 3rem;
   text-transform: uppercase;
 }
 
 h3 {
   font-family: "GT Super Display";
   font-weight: normal;
-  font-size: 2em;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
@@ -113,7 +113,7 @@ span {
 /*Header--------------------------------------*/
 
 .headerbox {
-  padding-top: 15rem;
+  padding-top: 15em;
   overflow: hidden;
 }
 
@@ -151,7 +151,7 @@ span {
   display: block;
   content: "XIII";
   color: #ff4c00;
-  font-size: 16px;
+  font-size: 1rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -177,12 +177,12 @@ span {
   font-family: "GT Super Text";
   font-weight: normal;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.25rem;
   font-size: 0.75rem;
   color: white;
   display: inline-block;
   text-decoration: none;
-  top: -2em;
+  top: -2rem;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -204,7 +204,7 @@ span {
   background: black;
   max-height: 1200px;
   width: calc(100vw + 6rem);
-  padding: 10px;
+  padding: 0.4rem;
   margin-left: -3rem;
   margin-bottom: 5.5rem;
 }
@@ -231,9 +231,9 @@ span {
 }
 
 .timeline-date {
-  letter-spacing: 0.25em;
+  letter-spacing: 0.25rem;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 0.8rem;
   font-family: "GT Super Display";
   margin-left: 1.2rem;
 }
@@ -246,7 +246,7 @@ span {
 .timeline-list-item:before {
   font-family: "GT Super Display";
   display: flex;
-  font-size: 24px;
+  font-size: 2rem;
   grid-row-end: span 2;
   place-items: center;
   color: #ff4c00;
@@ -337,14 +337,14 @@ span {
 .project-link {
   color: #ff4c00;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .roman-cap {
   font-family: "GT Super Display";
   text-align: right;
   color: #ff4c00;
-  font-size: 4em;
+  font-size: 4rem;
   width: 3.5rem;
 }
 
@@ -450,7 +450,7 @@ span {
   }
 
   .dev {
-    font-size: 16px;
+    font-size: 1rem;
     top: 1rem;
   }
 
@@ -531,15 +531,15 @@ span {
 
 @media (min-width: 1046px) {
   h1 {
-    font-size: 170px;
+    font-size: 10.6rem;
   }
 
   h2 {
-    font-size: 4.5em;
+    font-size: 4.5rem;
   }
 
   h3 {
-    font-size: 3em;
+    font-size: 3rem;
   }
 
   /* HEADER SECTION 1046px ------------------- */
@@ -696,7 +696,7 @@ span {
   }
 
   .roman-cap {
-    font-size: 8em;
+    font-size: 8rem;
   }
 
   .roman-cap-2 {
@@ -715,7 +715,7 @@ span {
     position: absolute;
     display: block;
     width: 3px;
-    height: 20%;
+    height: 10rem;
     content: "";
     background-color: #ff4c00;
     left: 50%;
@@ -835,12 +835,12 @@ span {
     position: absolute;
     fill: white;
     top: 4rem;
-    left: 14px;
+    left: 1rem;
     width: calc(100% - 10px);
   }
 
   .github {
-    left: 17px;
+    left: 1.3rem;
     width: calc(100% - 15px);
   }
 
