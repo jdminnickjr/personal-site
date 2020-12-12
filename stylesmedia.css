@@ -260,7 +260,7 @@ span {
   background-color: black;
 }
 
-/*Projects Section-----------------------------*/
+/*PROJECTS SECTION-----------------------------*/
 
 .projects {
   text-align: center;
@@ -328,7 +328,7 @@ span {
 
 .projects-list-item {
   display: grid;
-  grid-template-columns: 5rem 1fr;
+  grid-template-columns: 8rem 1fr;
   grid-column-gap: 0rem;
   margin-bottom: 7rem;
   font-size: 1em;
@@ -685,21 +685,26 @@ span {
   }
 
   .projects-list-item {
-    display: flex;
+    display: grid;
     max-width: 40rem;
     align-items: center;
   }
 
   .projects-list-item:nth-of-type(even) {
-    flex-direction: row-reverse;
+    grid-template-columns: 1fr 10rem;
+    grid-auto-flow: dense;
   }
 
   .roman-cap {
     font-size: 8em;
   }
 
+  .roman-cap-2 {
+    grid-column: 2;
+  }
+
   .roman-cap-3 {
-    margin-right: 3rem;
+    margin-right: 4rem;
   }
 
   .project-link {
@@ -795,7 +800,7 @@ span {
     height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    background: black;
+
     fill: #ff4c00;
     left: 0;
     right: 0;
@@ -811,7 +816,7 @@ span {
     height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    background: black;
+
     transform: rotateY(180deg);
     margin-bottom: 0;
   }
