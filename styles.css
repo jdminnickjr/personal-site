@@ -816,7 +816,7 @@ span {
     height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-
+    background-color: black;
     transform: rotateY(180deg);
     margin-bottom: 0;
   }
