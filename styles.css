@@ -67,10 +67,6 @@ span {
   font-family: "GT Super Display";
 }
 
-#uses {
-  display: none;
-}
-
 .overlay {
   background-image: url(/overlay-texture.jpg);
   background-size: cover;
@@ -157,11 +153,6 @@ span {
   left: 50%;
   margin-left: -0.8rem;
   margin-top: -0.6rem;
-}
-
-.starburst,
-.libra {
-  max-width: 4rem;
 }
 
 .text {
@@ -476,6 +467,22 @@ span {
     bottom: 0;
     z-index: -1;
   }
+
+  .libra,
+  .starburst  {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: .2rem;
+    margin: 0 auto;
+    max-width: 3rem;
+  }
+  
+  .libra {
+    top: .5rem;
+    max-width: 2.5rem;
+  }
+
   /* NAVIGATION SECTION 500px ------------------ */
   .navigation {
     display: inline-block;
