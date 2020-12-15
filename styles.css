@@ -106,6 +106,10 @@ span {
   margin-bottom: 1rem;
 }
 
+.navigation a:hover {
+  text-decoration: line-through;
+}
+
 /*Header--------------------------------------*/
 
 .headerbox {
