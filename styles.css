@@ -331,6 +331,10 @@ span {
   font-size: 1rem;
 }
 
+.project-link:hover {
+  text-decoration: line-through;
+}
+
 .roman-cap {
   font-family: "GT Super Display";
   text-align: right;
