@@ -18,10 +18,22 @@
   box-sizing: border-box;
 }
 
+html {
+  --color--main: black;
+  --color--accent:#ff4c00;
+  --color--text:white;
+}
+
+html.light {
+  --color--main: #360e05;
+  --color--accent: #C6A801;
+  --color--text: #d4ca9c;
+}
+
 body {
   font-family: "GT Super Text";
-  color: white;
-  background: black;
+  color: var(--color--text);
+  background: var(--color--main);
   margin: 0;
 }
 
@@ -81,6 +93,39 @@ span {
   pointer-events: none;
 }
 
+button {
+  z-index: 1;
+  position: absolute;
+  background: transparent;
+  right: 2rem;
+  top: 2rem;
+  border: none;
+  transition: ease-in-out 0.5s;
+}
+
+.cross{
+  fill:var(--color--accent);
+  height: 4rem;
+  width: 2rem;
+  transform: rotate(180deg);
+}
+
+.clicked {
+  transform: rotate(180deg);
+}
+
+button:hover {
+  cursor: pointer;
+  transform: rotate(10deg);
+}
+
+button.clicked:hover {
+  cursor: pointer;
+  transform: rotate(170deg);
+}
+
+
+
 /*Navigation-----------------------------------*/
 
 .navigation {
@@ -89,7 +134,7 @@ span {
   text-transform: uppercase;
   font-family: "GT Super Text";
   line-height: 1.5;
-  color: white;
+  color: var(--color--text);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -98,8 +143,8 @@ span {
 
 .navigation a {
   align-self: center;
-  color: white;
-  background-color: black;
+  color: var(--color--text);
+  background-color: var(--color--main);
   text-decoration: none;
   padding: 0;
   margin-top: 1rem;
@@ -121,8 +166,8 @@ span {
   display: none;
   width: 4rem;
   height: 4rem;
-  background-color: black;
-  border: 3px solid #ff4c00;
+  background-color: var(--color--main);
+  border: 3px solid var(--color--accent);
   border-radius: 100%;
   position: absolute;
 }
@@ -137,7 +182,7 @@ span {
   content: "";
   width: 3.25rem;
   height: 3.25rem;
-  border: 1px solid #ff4c00;
+  border: 1px solid var(--color--accent);
   border-radius: 100%;
   position: absolute;
   left: 50%;
@@ -150,7 +195,7 @@ span {
   font-family: "GT Super Display";
   display: block;
   content: "XIII";
-  color: #ff4c00;
+  color: var(--color--accent);
   font-size: 1rem;
   position: absolute;
   top: 50%;
@@ -164,7 +209,7 @@ span {
   font-family: "GT Super Display";
   text-align: center;
   align-self: center;
-  color: #ff4c00;
+  color: var(--color--accent);
 }
 
 .dev {
@@ -174,7 +219,7 @@ span {
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   font-size: 0.75rem;
-  color: white;
+  color: var(--color--text);
   display: inline-block;
   text-decoration: none;
   top: -2rem;
@@ -193,15 +238,40 @@ span {
 }
 
 .mag-cir {
-  fill: #ff4c00;
-  border: solid #ff4c00 3px;
+  fill: var(--color--accent);
+  border: solid var(--color--accent) 3px;
   border-radius: 100%;
-  background: black;
+  background: var(--color--main);
   max-height: 1200px;
   width: calc(100vw + 6rem);
   padding: 0.4rem;
   margin-left: -3rem;
   margin-bottom: 5.5rem;
+}
+
+.circle1 {
+  background-color: var(--color--main);
+}
+
+#outer-ring {
+  background-color: var(--color--main);
+}
+
+#middle-ring {
+  fill:var(--color--accent);
+  background-color: var(--color--main);
+}
+
+#inner-ring {
+  fill:var(--color--accent);
+}
+
+#inner{
+  fill:var(--color--main);
+}
+
+svg {
+  fill:var(--color--accent);
 }
 
 /*TIMELINE SECTION------------------------------*/
@@ -244,15 +314,15 @@ span {
   font-size: 1.5rem;
   grid-row-end: span 2;
   place-items: center;
-  color: #ff4c00;
+  color:var(--color--accent);
   width: 3rem;
   height: 3rem;
   content: counter(timeline, upper-roman);
   text-align: center;
-  border: 3px solid #ff4c00;
+  border: 3px solid var(--color--accent);
   border-radius: 100%;
   place-content: center;
-  background-color: black;
+  background-color: var(--color--main);
 }
 
 /*PROJECTS SECTION-----------------------------*/
@@ -270,7 +340,7 @@ span {
 }
 
 .section-header h2 {
-  border-bottom: solid #ff4c00 2px;
+  border-bottom: solid var(--color--accent) 2px;
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -306,7 +376,7 @@ span {
   display: inline-block;
   margin: 0 auto;
   margin-bottom: 1rem;
-  fill: #ff4c00;
+  fill: var(--color--accent);
   width: 3rem;
   margin-bottom: 5rem;
 }
@@ -330,7 +400,7 @@ span {
 }
 
 .project-link {
-  color: #ff4c00;
+  color: var(--color--accent);
   text-decoration: none;
   font-size: 1rem;
 }
@@ -342,7 +412,7 @@ span {
 .roman-cap {
   font-family: "GT Super Display";
   text-align: right;
-  color: #ff4c00;
+  color: var(--color--accent);
   font-size: 4rem;
   width: 3.5rem;
 }
@@ -372,8 +442,9 @@ span {
 
 .border {
   display: none;
-  fill: #ff4c00;
+  fill: var(--color--accent);
 }
+
 .image {
   display: none;
 }
@@ -381,14 +452,14 @@ span {
 .title {
   font-family: "GT Super Display";
   text-align: center;
-  color: white;
+  color: var(--color--text);
   font-size: 1.5rem;
   text-transform: uppercase;
 }
 
 .icon {
   padding: 5px;
-  fill: white;
+  fill:var(--color--text);
   width: 1.5rem;
   height: 1.5rem;
   margin-right: 1rem;
@@ -408,6 +479,11 @@ span {
     font-size: 3rem;
   }
 
+  button {
+    right: 4.5rem;
+    top: 4.5rem;
+  }
+
   /* HEADER SECTION 500px --------------------- */
   header {
     padding: 2.5rem;
@@ -417,7 +493,7 @@ span {
   }
 
   .headerbox {
-    border: 3px solid #ff4c00;
+    border: 3px solid var(--color--accent);
     position: absolute;
     display: grid;
     place-items: center;
@@ -557,6 +633,11 @@ span {
     font-size: 3rem;
   }
 
+  button {
+    right: 6rem;
+    top: 6rem;
+  }
+
   /* HEADER SECTION 1046px ------------------- */
   header {
     position: relative;
@@ -607,7 +688,7 @@ span {
     content: "";
     width: 5rem;
     height: 5rem;
-    border: 1px solid #ff4c00;
+    border: 1px solid var(--color--accent);
     border-radius: 100%;
     position: absolute;
     left: 50%;
@@ -621,7 +702,7 @@ span {
     content: "";
     width: 6rem;
     height: 6rem;
-    border: 3px solid #ff4c00;
+    border: 3px solid var(--color--accent);
     border-radius: 100%;
     position: absolute;
     left: 50%;
@@ -632,7 +713,7 @@ span {
 
   .mag-cir {
     z-index: 1;
-    background-color: black;
+    background: var(--color--main);
     position: absolute;
     left: 0;
     right: 0;
@@ -656,7 +737,7 @@ span {
     width: 3px;
     height: 100%;
     content: "";
-    background-color: #ff4c00;
+    background-color: var(--color--accent);
     left: 50%;
     margin-left: -1.5px;
     top: 0;
@@ -723,7 +804,7 @@ span {
   }
 
   .project-link {
-    color: #ff4c00;
+    color: var(--color--accent);
   }
 
   .project-list:before {
@@ -732,7 +813,7 @@ span {
     width: 3px;
     height: 10rem;
     content: "";
-    background-color: #ff4c00;
+    background-color: var(--color--accent);
     left: 50%;
     margin-left: -1.5px;
     bottom: -10em;
@@ -761,7 +842,7 @@ span {
     width: 200px;
     margin: 1em;
     padding: 5px;
-    border: solid #ff4c00 2px;
+    border: solid var(--color--accent) 2px;
     border-radius: 5px;
     transform-style: preserve-3d;
     transition: transform 1s ease;
@@ -783,10 +864,10 @@ span {
   }
 
   .hover-icon {
+    fill:var(--color--accent);
     display: grid;
     z-index: 2;
     height: 10rem;
-    fill: #ff4c00;
     position: absolute;
     top: 6rem;
     bottom: 0;
@@ -799,6 +880,7 @@ span {
 
   .libra-hover,
   .lev-hover {
+    fill:var(--color--accent);
     opacity: 0;
     height: 9rem;
     width: 9rem;
@@ -806,6 +888,7 @@ span {
 
   .card-link:hover .hover-icon {
     opacity: 0.75;
+    fill:var(--color--accent);
   }
 
   .tarot-back {
@@ -816,7 +899,7 @@ span {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 
-    fill: #ff4c00;
+    fill: var(--color--accent);
     left: 0;
     right: 0;
     top: 0;
@@ -831,7 +914,7 @@ span {
     height: 100%;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    background-color: black;
+    background-color: var(--color--main);
     transform: rotateY(180deg);
     margin-bottom: 0;
   }
@@ -842,13 +925,14 @@ span {
 
   .border {
     display: block;
-    fill: #ff4c00;
+    fill: var(--color--accent);
   }
+
   .image {
     display: block;
     z-index: -1;
     position: absolute;
-    fill: white;
+    fill: var(--color--text);
     top: 4rem;
     left: 1rem;
     width: calc(100% - 10px);
@@ -877,7 +961,7 @@ span {
   .title {
     position: absolute;
     text-align: center;
-    color: #ff4c00;
+    color: var(--color--accent);
     font-size: 1rem;
     text-transform: uppercase;
     left: 0;
@@ -887,7 +971,7 @@ span {
 
   .icon {
     position: absolute;
-    fill: #ff4c00;
+    fill: var(--color--accent);
     width: 2rem;
     height: 2rem;
     bottom: 1rem;

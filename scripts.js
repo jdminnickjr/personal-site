@@ -43,3 +43,18 @@ circleObserver.observe(magCirTarget);
 
 const tarotSection = document.querySelector(".tarot-section");
 observer.observe(tarotSection);
+
+const button = document.getElementById('button');
+const html = document.documentElement;
+
+console.log(button);
+
+button.addEventListener('mousedown', () => {
+
+console.log("praise bigus");
+
+html.classList.toggle('light')
+
+button.classList.toggle('clicked');
+
+});
